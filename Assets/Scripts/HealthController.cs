@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void TakeDamage(int amount)
     {
-        
+        // Spawn health bar
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetMouseButton(0))
+        {
+            TakeDamage(Random.Range(10, 25));
+        }
     }
 }
