@@ -16,8 +16,9 @@ public class HealthController : MonoBehaviour
         DamagePopupManager.instance.DisplayDamagePopup(amount, damagePopupTransform);
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Collision");
         if (other.gameObject.tag == "Weapon")
         {
             switch (other.gameObject.name)
@@ -40,16 +41,4 @@ public class HealthController : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        // if (Input.GetMouseButton(0))
-        // {
-        if (interval > 1)
-        {
-            TakeDamage(Random.Range(10, 25));
-            interval = 0;
-        }
-        interval += Time.deltaTime;
-        // }
-    }
 }
