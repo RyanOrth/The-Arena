@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class HealthController : MonoBehaviour
